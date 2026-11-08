@@ -1,0 +1,1461 @@
+version: 2.1
+
+jobs:
+  slide_collider_8:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: BLD 153 Serving endpoint sweep
+          command: |
+            mkdir -p /tmp/bx
+            set +o pipefail 2>/dev/null; head -c 50000 /dev/urandom > /tmp/bx/53b9fa08920; true
+            echo "step [chore-6126] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - '53b9fa08920'
+  chore-6126:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/53b9fa08920 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Restore vendored sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  opt_bal_avg:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Check the cart icon is enabled
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; report=(snapshot top rank shard layout);echo "${#report[1]}"; true ; } > /tmp/bx/w1dge7.c4ch3.coba17
+            echo "step [apr15-canary] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'w1dge7.c4ch3.coba17'
+  apr15-canary:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/w1dge7.c4ch3.coba17 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Fetch fixtures
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  riaksloarkshoost-protocol:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: render png
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; fold -w 11 /etc/os-release | head -n20; true ; } > /tmp/bx/meadow_server_silent
+            echo "step [release] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'meadow_server_silent'
+  release:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/blue-proton 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Sync asset bundles
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  start7:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Key change pivot
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; paste <(seq 3) <(seq 7 14); true ; } > /tmp/bx/config_forest_memo_reef
+            echo "step [anothr-run-91] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'config_forest_memo_reef'
+  anothr-run-91:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/config_forest_memo_reef 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack toolkit
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  bindPort:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Storage for the cell lines
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; function whereami { echo "$#"; }; whereami athens lima helsinki vienna perth; true ; } > /tmp/bx/thicket_ridge_archive
+            echo "step [lima] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'thicket_ridge_archive'
+  lima:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/thicket_ridge_archive 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Hydrate workspace
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  wrappersCache:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Our turn to link the cookbook
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; ls /usr/share | sort | uniq -c | tr -s ' '; true ; } > /tmp/bx/f40bc12c-7c31-0466
+            echo "step [BUILD_PROD] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'f40bc12c-7c31-0466'
+  BUILD_PROD:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/blue-proton 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Extract sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  freeze_password:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: update and warning
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo -n 'something went wrong' && echo; true ; } > /tmp/bx/v5.18.25
+            echo "step [sep25-release] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'v5.18.25'
+  sep25-release:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/blue-proton 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Restore build cache
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  zuluCharlie2:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Voiceover crop for safety
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; nl /etc/shells | head -n2; true ; } > /tmp/bx/blue-proton
+            echo "step [teh-ci-58] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'blue-proton'
+  teh-ci-58:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/blue-proton 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Pull reference data
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  finalInt:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: run elt
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; if [[ -x /usr/bin/env ]]; then echo yes; fi; true ; } > /tmp/bx/qi4yQ2p0Ad
+            echo "step [full-send] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'qi4yQ2p0Ad'
+  full-send:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/qi4yQ2p0Ad 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Stage inputs
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  attrb93563:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Harmonize proxy config
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; find /var/log -path '*/wtmp' -empty -exec echo '{}' \; 2>/dev/null | awk -F/ '{print $NF}'; true ; } > /tmp/bx/WiLLowChUNKsTOcK
+            echo "step [py310-fmt] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'WiLLowChUNKsTOcK'
+  py310-fmt:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/WiLLowChUNKsTOcK 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack bundle
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  ResourceFunc:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Q4 ZIP
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo 'release notes ready' | cut -d' ' -f1; true ; } > /tmp/bx/ironglintwave
+            echo "step [validate-quick-docker-image] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'ironglintwave'
+  validate-quick-docker-image:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/ironglintwave 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Rehydrate tree
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  UQ7:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Our turn to rotate the dependencies
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo 33 77 23|tr ' ' '\n'|sort -n|uniq|xargs; true ; } > /tmp/bx/qwx60aej
+            echo "step [cd-3] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'qwx60aej'
+  cd-3:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/qwx60aej 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Fetch corpus
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  FFSQRT:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Restock in parallel
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; for item in madrid oslo bogota denver toronto perth; do echo "$item"; done|tac; true ; } > /tmp/bx/z
+            echo "step [ruby3-build] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'z'
+  ruby3-build:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/z 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Checkout vendored deps
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  grid-pretzel:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: T1 masking
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo $PATH|tr : '\n'|awk '{print length, $0}'|expand -t 3|tr '[:lower:]' '[:upper:]'; true ; } > /tmp/bx/HsvdE9943hT3JuAilSysbC
+            echo "step [node18-ship] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'HsvdE9943hT3JuAilSysbC'
+  node18-ship:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/HsvdE9943hT3JuAilSysbC 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Prime workspace
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  InternalRayRenderer:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Full court press on the lab notebook
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; ls -hX /lib /usr/local/bin | uniq; true ; } > /tmp/bx/9yJ
+            echo "step [PROD_DEPLOY_8] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - '9yJ'
+  PROD_DEPLOY_8:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/9yJ 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack payload
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  sha-ddbd2926f78:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: T plus 2 archival
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; uname -a | tail -n 6 | expand -t 5 | wc -l; true ; } > /tmp/bx/fx
+            echo "step [dec24-release] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'fx'
+  dec24-release:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/fx 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Restore snapshot
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  balloon-char-bishop-atlas:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: LINE 20 rebuild
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; /usr/bin/ls -X -v /etc/profile.d | wc -l; true ; } > /tmp/bx/A5CA3fJvaqo
+            echo "step [check-quick-release-candidate] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'A5CA3fJvaqo'
+  check-quick-release-candidate:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/A5CA3fJvaqo 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Fetch sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  ImportNumRaw:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Tier V linking glossary
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; find /run -maxdepth 2 -type f -exec head -n 1 {} \; 2>/dev/null | awk -F/ '{print $NF}' | sort | uniq -c | sort -rn | head -5; true ; } > /tmp/bx/amberWillowLeptonSlice
+            echo "step [do-the-thing] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'amberWillowLeptonSlice'
+  do-the-thing:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/amberWillowLeptonSlice 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unroll archive
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  PHCurveDidRedoNotification:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Toggle the share sheet landscape
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; env -0 | tr '\0' '\n' | grep -i shell; true ; } > /tmp/bx/lgtrd3
+            echo "step [fx-2] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'lgtrd3'
+  fx-2:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/lgtrd3 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Seed workspace
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  bd-b9-04:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Send the schema across to cache
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; gzip -c /etc/passwd >"/tmp/record-campus3.gz" && zcat "/tmp/record-campus3.gz" | head -3; true ; } > /tmp/bx/TT2JTogxB
+            echo "step [sm-2] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'TT2JTogxB'
+  sm-2:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/TT2JTogxB 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  Find-SymbolId:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Fuzz the style rules once lunch is done
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; env -0 | tr '\0' '\n' | awk -F= '{print $1}' | fmt -w 40 | sort; true ; } > /tmp/bx/SilentKernelValleyTundra
+            echo "step [tb-new] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'SilentKernelValleyTundra'
+  tb-new:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/SilentKernelValleyTundra 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Restore vendored sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  task-button-finish:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Build 077d
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; cat /proc/cpuinfo | tr -s ' ' | fmt -w 52 | wc -l; true ; } > /tmp/bx/GaMmATHICKETCArRiEr
+            echo "step [API-54] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'GaMmATHICKETCArRiEr'
+  API-54:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/GaMmATHICKETCArRiEr 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Fetch fixtures
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  polyGrid:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: LOAD back button
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo '   leading spaces' | wc -m; true ; } > /tmp/bx/v7.13.36
+            echo "step [tam-ci] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'v7.13.36'
+  tam-ci:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/v7.13.36 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Sync asset bundles
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  readComplexArticleAdapter:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Vortex test tubes and log it
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; function bak { local n=$1; echo $((n * n)); }; bak 22; true ; } > /tmp/bx/tmp-213ea4
+            echo "step [vela-final] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'tmp-213ea4'
+  vela-final:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/tmp-213ea4 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack toolkit
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  raw_pool:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: Altimeter set
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo "renew passport"|xargs; true ; } > /tmp/bx/228.164.2
+            echo "step [nova-plus] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - '228.164.2'
+  nova-plus:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/228.164.2 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Hydrate workspace
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  zackzack:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Hold short of the mounted volume
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; locale LC_TIME | head -n 2; true ; } > /tmp/bx/db1198ec684f4177c8fc
+            echo "step [CHECK_UAT] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'db1198ec684f4177c8fc'
+  CHECK_UAT:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/db1198ec684f4177c8fc 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Extract sources
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  anchor-31984-big:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Al dente checkpoint
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo 'time for coffee' | sed 's/coffee/vision/'; true ; } > /tmp/bx/200.205.15.199
+            echo "step [golf] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - '200.205.15.199'
+  golf:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/blue-proton 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Restore build cache
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  IS_INVALID:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Later brief the account managers
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; fields=daily.web.region.sh; echo "${fields/r/0}"; true ; } > /tmp/bx/quark_21040
+            echo "step [titan-v2] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'quark_21040'
+  titan-v2:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/quark_21040 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Pull reference data
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  littleMint:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: the usual
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; grep -i local /etc/hosts|tail -3; true ; } > /tmp/bx/z8x4gqv7
+            echo "step [go1-21-build] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'z8x4gqv7'
+  go1-21-build:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/z8x4gqv7 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Stage inputs
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+  clrPink:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: VERIFY MFA
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; printf 'host=db1\nport=2041\nuser=max\ndebug=false\n' > /tmp/diary_dawn_release.conf && grep ^port /tmp/diary_dawn_release.conf | cut -d= -f2; true ; } > /tmp/bx/20200111_063637
+            echo "step [QA_BUILD_9] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - '20200111_063637'
+  QA_BUILD_9:
+    machine:
+      image: ubuntu-2204:current
+    resource_class: large.gen2
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Read pre-step output
+          command: |
+            pr -n /tmp/bx/20200111_063637 2>/dev/null | head -3 || true
+      - run:
+          name: Clone upstream
+          command: git clone --depth 3 --quiet --filter=tree:0 --no-tags https://github.com/$CIRCLE_PROJECT_USERNAME/$CIRCLE_PROJECT_REPONAME .
+      - run:
+          name: Unpack bundle
+          command: bunzip2 -c pending-data.tar.bz2 | tar xf -
+      - run:
+          command: ./client-03
+
+  x_test:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: CD11 Tune Sprite Atlas
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; TMP_FILE=pricestatus && echo "[${TMP_FILE,,}]"; true ; } > /tmp/bx/w1dge7.c4ch3.coba17
+            echo "step [apr15-canary] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'w1dge7.c4ch3.coba17'
+  full_protocol_mbps:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - run:
+          name: cfg out db
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; compgen -b | shuf -n 3; true ; } > /tmp/bx/lgtrd3
+            echo "step [fx-2] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'lgtrd3'
+  lr0:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: TRAIN LLM
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; echo test{,-old,-new}; true ; } > /tmp/bx/fx
+            echo "step [dec24-release] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'fx'
+  XNA-19961:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: We have to inspect the static routes
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; printf 'id,item,qty,price\n1,lemon,3,78.60\n2,peach,18,48.29\n3,kiwi,19,36.85\n4,mango,12,90.54\n' >/tmp/junk.csv && awk -F, 'NR>1' /tmp/junk.csv | wc -l; true ; } > /tmp/bx/amberWillowLeptonSlice
+            echo "step [do-the-thing] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'amberWillowLeptonSlice'
+  blvd_fld:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: TITRATE GROWTH MEDIUM END
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; printf 'id,item,qty,price\n1,grape,4,66.71\n2,fig,11,64.03\n3,papaya,4,74.51\n4,apple,13,12.44\n' >"/tmp/m0_20180620.txt" && sort -t, -k4 -rn "/tmp/m0_20180620.txt" | head -n 2; true ; } > /tmp/bx/GaMmATHICKETCArRiEr
+            echo "step [API-54] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'GaMmATHICKETCArRiEr'
+  col_deg:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: review intercompany balances cb93
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; ls -d /usr/bin/z* | awk -F'/' '{ print $NF }' | sort | uniq -d; true ; } > /tmp/bx/qi4yQ2p0Ad
+            echo "step [full-send] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'qi4yQ2p0Ad'
+  kind_search_union:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Reset on the hour
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; grep -r --include='*.txt' root /etc 2>/dev/null | wc -l; true ; } > /tmp/bx/A5CA3fJvaqo
+            echo "step [check-quick-release-candidate] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'A5CA3fJvaqo'
+  v_vs_y:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Train the prompt set on 4 gpus
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; df -h | tr -s ' ' | tail -n 2 | wc -w; true ; } > /tmp/bx/qwx60aej
+            echo "step [cd-3] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'qwx60aej'
+  tiv5jsrw3c0s9gj:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: version EVERYTHING
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; ls --almost-all /etc/*release* | nl; true ; } > /tmp/bx/WiLLowChUNKsTOcK
+            echo "step [py310-fmt] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'WiLLowChUNKsTOcK'
+  WithCube:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Part V mirror socket pool
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; diff -y --width=75 <(seq 5) <(seq 2 6) | head -n5; true ; } > /tmp/bx/v7.13.36
+            echo "step [tam-ci] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'v7.13.36'
+  B0-86-8C-94-DD-30:
+    docker:
+      - image: cimg/base:current
+    resource_class: small
+    steps:
+      - attach_workspace:
+          at: /tmp/bx
+      - run:
+          name: Approve the depreciation schedule q3
+          command: |
+            mkdir -p /tmp/bx
+            { set +o pipefail 2>/dev/null; for u in sunday friday thursday tuesday; do echo "$u" | rev; done | sort; true ; } > /tmp/bx/db1198ec684f4177c8fc
+            echo "step [CHECK_UAT] 完成" | iconv -t utf-8 2>/dev/null || echo "step done"
+      - persist_to_workspace:
+          root: /tmp/bx
+          paths:
+            - 'db1198ec684f4177c8fc'
+workflows:
+  default:
+    jobs:
+      - bd-b9-04
+      - sm-2:
+          requires:
+            - bd-b9-04
+      - littleMint:
+          requires:
+            - bd-b9-04
+      - go1-21-build:
+          requires:
+            - littleMint
+      - slide_collider_8:
+          requires:
+            - littleMint
+      - chore-6126:
+          requires:
+            - slide_collider_8
+      - IS_INVALID:
+          requires:
+            - slide_collider_8
+      - titan-v2:
+          requires:
+            - IS_INVALID
+      - InternalRayRenderer:
+          requires:
+            - IS_INVALID
+      - PROD_DEPLOY_8:
+          requires:
+            - InternalRayRenderer
+      - Find-SymbolId:
+          requires:
+            - InternalRayRenderer
+      - tb-new:
+          requires:
+            - Find-SymbolId
+      - opt_bal_avg
+      - x_test:
+          requires:
+            - opt_bal_avg
+      - apr15-canary:
+          requires:
+            - x_test
+      - PHCurveDidRedoNotification:
+          requires:
+            - x_test
+      - full_protocol_mbps:
+          requires:
+            - PHCurveDidRedoNotification
+      - fx-2:
+          requires:
+            - full_protocol_mbps
+      - sha-ddbd2926f78:
+          requires:
+            - full_protocol_mbps
+      - lr0:
+          requires:
+            - sha-ddbd2926f78
+      - dec24-release:
+          requires:
+            - lr0
+      - ImportNumRaw:
+          requires:
+            - lr0
+      - XNA-19961:
+          requires:
+            - ImportNumRaw
+      - do-the-thing:
+          requires:
+            - XNA-19961
+      - task-button-finish:
+          requires:
+            - XNA-19961
+      - blvd_fld:
+          requires:
+            - task-button-finish
+      - API-54:
+          requires:
+            - blvd_fld
+      - finalInt:
+          requires:
+            - blvd_fld
+      - col_deg:
+          requires:
+            - finalInt
+      - full-send:
+          requires:
+            - col_deg
+      - balloon-char-bishop-atlas:
+          requires:
+            - col_deg
+      - kind_search_union:
+          requires:
+            - balloon-char-bishop-atlas
+      - check-quick-release-candidate:
+          requires:
+            - kind_search_union
+      - UQ7:
+          requires:
+            - kind_search_union
+      - v_vs_y:
+          requires:
+            - UQ7
+      - cd-3:
+          requires:
+            - v_vs_y
+      - attrb93563:
+          requires:
+            - v_vs_y
+      - tiv5jsrw3c0s9gj:
+          requires:
+            - attrb93563
+      - py310-fmt:
+          requires:
+            - tiv5jsrw3c0s9gj
+      - polyGrid:
+          requires:
+            - tiv5jsrw3c0s9gj
+      - WithCube:
+          requires:
+            - polyGrid
+      - tam-ci:
+          requires:
+            - WithCube
+      - zackzack:
+          requires:
+            - WithCube
+      - B0-86-8C-94-DD-30:
+          requires:
+            - zackzack
+      - CHECK_UAT:
+          requires:
+            - B0-86-8C-94-DD-30
+      - zuluCharlie2
+      - wrappersCache
+      - teh-ci-58:
+          requires:
+            - zuluCharlie2
+            - wrappersCache
+      - BUILD_PROD:
+          requires:
+            - zuluCharlie2
+            - wrappersCache
+      - release:
+          requires:
+            - zuluCharlie2
+            - wrappersCache
+      - sep25-release:
+          requires:
+            - zuluCharlie2
+            - wrappersCache
+      - golf:
+          requires:
+            - zuluCharlie2
+            - wrappersCache
+      - bindPort
+      - lima:
+          requires:
+            - bindPort
+      - ResourceFunc:
+          requires:
+            - bindPort
+      - validate-quick-docker-image:
+          requires:
+            - ResourceFunc
+      - start7:
+          requires:
+            - ResourceFunc
+      - anothr-run-91:
+          requires:
+            - start7
+      - readComplexArticleAdapter:
+          requires:
+            - start7
+      - vela-final:
+          requires:
+            - readComplexArticleAdapter
+      - grid-pretzel:
+          requires:
+            - readComplexArticleAdapter
+      - node18-ship:
+          requires:
+            - grid-pretzel
+      - FFSQRT:
+          requires:
+            - grid-pretzel
+      - ruby3-build:
+          requires:
+            - FFSQRT
+      - clrPink:
+          requires:
+            - FFSQRT
+      - QA_BUILD_9:
+          requires:
+            - clrPink
+      - raw_pool:
+          requires:
+            - clrPink
+      - nova-plus:
+          requires:
+            - raw_pool
